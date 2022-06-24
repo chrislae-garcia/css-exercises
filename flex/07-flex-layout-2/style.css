@@ -15,22 +15,24 @@ body {
   font-size: 32px;
   font-weight: 900;
   align-items: center;
-  padding-left: 16px;
+  padding: 0 16px;
 }
 
 
 .content {
   display: flex;
+  flex: 1;
 }
 
 .sidebar {
-  min-width: 300px;
+  width: 300px;
+  flex-shrink: 0;
   background: royalblue;
   padding: 16px;
 }
 
 ul {
-  list-style: none;
+  list-style-type: none;
   padding: 0;
   margin: 0;
 }
@@ -48,16 +50,14 @@ a {
 .cards {
   display: flex;
   padding: 32px;
-  flex-flow: row wrap;
+  flex-wrap: wrap;
 }
 
 .card {
-  display: flex;
-  flex: auto;
   border: 1px solid #eee;
   box-shadow: 2px 4px 16px rgba(0,0,0,.06);
   border-radius: 4px;
-  max-width: 300px;
+  width: 300px;
   height: 300px;
   margin: 16px;
   padding: 16px;
@@ -65,11 +65,9 @@ a {
 
 .footer {
   display: flex;
-  flex-direction: column;
   height: 72px;
   background: #eee;
   color: darkmagenta;  
   align-items: center;
   justify-content: center;
-  justify-self: end;
 }
